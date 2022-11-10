@@ -1,0 +1,225 @@
+.nav{
+    .banner{
+        margin-top:calc($header-height + $contact-info-height);
+        width: 100%;
+        background: rgba(0,0,0,0.25) url('../img/Asia-Myanmar-4\ 2.png') center / cover no-repeat ;
+        background-blend-mode: darken;
+        position: relative;
+        animation: isSlide infinite 10s;
+        height: 600px;
+        @include flexCenter(center,flex-start);
+
+        @include responsible(s){
+            margin-top: $header-height;
+            height: 180px;
+        }
+
+        &__text{
+            align-items: center;
+            text-align: center;
+            font-size: 4.4rem;
+            line-height: 130%;
+            height: auto;
+            color: $white-color;
+            font-family: $playfair-fonts;
+
+            @include responsible(S){
+                font-size: 3.4rem;
+            }
+        }
+    }
+
+    .welcome-to{
+        @include why-us($black-color,$white-color);
+
+        .welcome-to__label{
+
+            h1{
+                @include responsible(s){
+                    font-size: 3.4rem;
+                }
+            }
+        }
+
+        p{
+            width: 60%;
+            margin: auto;
+
+            @include responsible(m){
+                width: 100%;
+            }
+            @include responsible(s){
+                width: 100%;
+            }
+        }
+
+        
+        .picture-left{
+            background: url('../img/pexels-pixabay-248082\ 2.png') left / 99% 100% no-repeat;
+            width: 100%;
+            height: 450px;
+
+            @include responsible(s){
+                background-position: center;
+                background-size: 100% 100%;
+                width: 100%;
+                height: 350px;
+                margin-bottom: 4px;
+            }
+        }
+
+        .picture-center{
+            background:
+            url('../img/pexels-visionpic-net-1007657\ 2.png') top left / 49.5% 49.5% no-repeat,
+            url('../img/pexels-oliver-sjÃ¶strÃ¶m-931018\ 1.png') top right / 49.5% 49.5% no-repeat,
+            url('../img/laos-gold-entrance-temple\ 1.png') bottom / 100% 49.5% no-repeat;
+            width: 100%;
+            height: 450px;
+            padding: 2px;
+        }
+        .picture-right{
+            background:
+            url('../img/Asia-Myanmar-7\ 1.png') top right / 99% 40%  no-repeat,
+            url('../img/thailand-chiangmai-rice-field\ 1.png') bottom right / 99% 59% no-repeat;
+            width: 100%;
+            height: 450px;
+            padding: 2px;
+
+            @include responsible(s){
+                margin-top: 6px;
+                background-size: 100% 40% ,100% 58.8%;
+            }
+        }
+
+        @include responsible(m){
+            .picture-right,
+            .picture-left,
+            .picture-center {
+                height: 314px;
+            }
+        }
+
+        .comment{
+            width: 55%;
+            margin: auto;
+            padding: 40px 40px 0;
+            position: relative;
+            font-family: $gotham-fonts;
+
+            @include responsible(m){
+                width: 100%;
+            }
+            @include responsible(s){
+                width: 100%;
+            }
+
+            p{
+                font-size: 1.7rem;
+                line-height: 150%;
+                letter-spacing: 0.5px;
+                text-align: center;
+                color: #111111;
+            }
+
+            &__svg{
+                position: absolute;
+                top: 16%;
+                left: -3%;
+
+                @include responsible(s){
+                    left: 1%;
+                }
+            }
+            
+        }       
+        
+    }
+
+    .our-misson{
+        background: rgba(0,0,0,0.45) url('../img/Asia-Cambodia-Siem\ Reap-4\ 4.png') center / cover no-repeat ;
+        width: 100%;
+        height: 590px;
+        @include flexCenter(Center,center);
+        background-blend-mode: darken;
+        margin: 30px 0;
+
+        &__text{
+            width: 65%;
+            margin: auto;
+
+            @include responsible(s){
+                width: 100%;
+            }
+
+            h4{
+                font-size: 1.1rem;
+                line-height: 150%;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+                text-align: center;
+                color: rgba(230, 230, 230,0.8);
+                font-family: sans-serif;
+                font-weight: 100;
+                margin-bottom: 30px;
+                font-family: $gotham-fonts;
+
+                @include responsible(s){
+                    margin-bottom: 20px;
+                }
+            }
+            h2{
+                font-size: 3.2rem;
+                line-height: 120%;
+                text-align: center;
+                font-weight: 400;
+                color: rgba(230, 230, 230,0.8);
+                font-family: inherit;
+                letter-spacing: 1px;
+                font-style: italic;
+                font-family: $playfair-fonts;
+            }
+        }
+    }
+
+    .information{
+        padding: 80px 0;
+        background: url('../img/Background\ \(3\).png') bottom right / 83% 75% no-repeat;
+        position: relative;
+
+        @include responsible(S){
+            padding: 30px 0;
+        }
+
+        &__wrap{
+            width: 92%;
+            height: 100%;
+
+            @include responsible(s){
+                width: 100%;
+                padding: 0 10px;
+            }
+
+            .information__author{
+                font-size: 4.4rem;
+                line-height: 130%;
+                letter-spacing: 1px;
+                margin-bottom: 40px;
+                font-weight: 500;
+                font-family: $playfair-fonts;
+
+                @include responsible(s){
+                    font-size: 3.4rem;
+                }
+            }
+
+            .information__text{
+                font-family: $gotham-fonts;
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+                line-height: 160%;
+                letter-spacing: 1.5px;
+                opacity: 0.9;
+            }
+        }
+    }
+}

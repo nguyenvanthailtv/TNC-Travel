@@ -1,0 +1,42 @@
+@keyframes isSlide{
+    0%, 100%{
+        background: rgba(0, 0, 0, 0.25) url('../img/laos-song-river\ 1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    16%{
+        background: rgba(0, 0, 0, 0.25) url('../img/laos-gold-entrance-temple\ 1.png') center no-repeat cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    32%{
+        background: rgba(0, 0, 0, 0.25) url('../img/thailand-chiangmai-rice-field\ 1.png');
+        background-size: cover;
+
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    48%{
+        background: rgba(0, 0, 0, 0.25) url('../img/Asia-Myanmar-4\ 2.png');
+        background-size: cover;
+
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    64%{
+        background: rgba(0, 0, 0, 0.25) url('../img/Asia-Myanmar-4\ 2\ \(1\).png');
+        background-size: cover;
+
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    80%{
+        background: rgba(0, 0, 0, 0.25) url('../img/Asia-Myanmar-1\ 1.png');
+        background-size: cover;
+
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

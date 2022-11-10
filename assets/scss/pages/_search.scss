@@ -1,0 +1,285 @@
+.banner{
+    margin-top:calc($header-height + $contact-info-height);
+    width: 100%;
+    background: rgba(0,0,0,0.25) url('../img/Asia-Myanmar-4\ 2.png') center / cover no-repeat ;
+    background-blend-mode: darken;
+    position: relative;
+    animation: isSlide infinite 10s;
+    height: 600px;
+    @include flexCenter(center,flex-start);
+
+    @include responsible(s){
+        margin-top: $header-height;
+        height: 180px;
+    }
+
+    &__text{
+        align-items: center;
+        text-align: center;
+        font-size: 4.4rem;
+        line-height: 130%;
+        height: auto;
+        color: $white-color;
+        font-family: $playfair-fonts;
+
+        @include responsible(S){
+            font-size: 3.4rem;
+        }
+    }
+}
+
+.nav__search{
+    position: relative;
+    margin: 0 0 80px 0;
+    .search__wrap{
+        display: flex;
+        margin: 60px 0 40px;
+        
+        @include responsible(m){
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 60px;
+        }
+
+        @include responsible(s){
+            display: block;
+            margin-bottom: 50px;
+            padding: 10px;
+        }
+
+        .search__list{
+            width: 100%;
+            display: flex;
+            padding: 0;
+            border: 1px solid rgba(0,0,0,0.1);
+
+            @include responsible(m){
+                width: 90%;
+                max-width: 90%;
+            }
+
+            @include responsible(s){
+                display: block;
+            }
+
+            .search__item{
+                flex: 1;
+                background-color: #fff;
+                @include flexCenter(center,flex-start);
+                position: relative;
+                font-family:$playfair-fonts;
+                cursor: pointer;
+
+                @include responsible(m){
+                    max-width: 25%;
+                    padding: 9px 0;
+                }
+
+                .search__input{
+                    flex: 1;
+                    font-size: 1.4rem;
+                    line-height: 200%;
+                    outline: none;
+                    border: none;
+                    letter-spacing: 0.5px;
+                    position: relative;
+                    display: block;
+                    padding: 15px 0 15px 15px;
+
+
+                    @include responsible(m){
+                        max-width: 80%;
+                    }
+
+                    &::placeholder{
+                        opacity: 0.6;
+                        font-family:$playfair-fonts;
+                        letter-spacing: 0.5px;
+                    }
+
+                    
+
+                }
+                .budget{
+                    z-index: 4;
+                }
+                .search__svg{
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding-right: 15px;
+                
+                    @include responsible(m){
+                        padding-right: 12px;
+                    }
+                }
+
+                .pick-list__box{
+                    position: absolute;
+                    width: 100%;
+                    top: calc(100% + 2px);
+                    left: 0;
+                    z-index: 3;
+                    box-shadow: 0 0 7px -4px #000;
+                    display: none;
+                    font-family: $gotham-fonts;
+
+                    
+                        .pick-list{
+                            padding: 0;
+
+                            .pick-list__item{
+                                color: rgba(0,0,0,0.5);
+                                list-style-type: none;
+                                padding: 10px 20px;
+                                font-size: 1.4rem;
+                                line-height: 130%;
+                                z-index: 2;
+                                background-color: $white-color;
+                                border-bottom: 1px solid rgba(0,0,0,0.05);
+                                z-index: 1;
+                                cursor: pointer;
+
+                                &:hover{
+                                    font-weight: bold;
+                                    color: rgba(0, 60, 92,0.5);
+                                    background-color: rgb(242, 242, 242);
+                                }
+
+                            }
+                            
+                            .pick-list__item--active{
+                                background-color: rgb(242, 242, 242);
+                                font-weight: bold;
+                                color: rgba(0, 60, 92,0.5);
+                            }
+
+                        }
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 8px;
+                    background-color:transparent;
+                    bottom: -6px;
+                }
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 2px;
+                    height: 50%;
+                    background-color:rgba(0,0,0,0.1);
+                    left: -0.7px;
+                    z-index: 1;
+
+                    @include responsible(S){
+                        width: 0;
+                    }
+                }
+            }
+        }
+
+        .search__btn{
+            display: block;
+            width: 18%;
+
+
+            @include responsible(s){
+                width: 100%;
+            }
+            button{
+                display: block;
+                width: 100%;
+                height: 100%;
+                border: none;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                letter-spacing: 0.6px;
+                color: $white-color;
+                background-color:$dark-blue-color;
+
+                &:hover{
+                    background-color: $medium-blue-color;
+                }
+
+                @include responsible(s){
+                    margin-top: 20px;
+                    padding: 15px;
+                    border: 1px solid $white-color;
+                }
+            }
+            .btn--mobile{
+                display: none; 
+
+                @include responsible(m){
+                    display: block;
+                }
+            }
+
+            .btn--pc-tablet{
+                
+                @include responsible(m){
+                    display: none;
+                }
+            }
+        }
+    }
+    .image-search{
+        position: relative;
+
+        .tour__item-date{
+            position: absolute;
+            top: 100%;
+            left: 22%;
+            transform: translate(-5%, -50%);
+
+            @include responsible(m){
+                transform: translate(-15%, -50%);
+            }
+
+            p{
+                font-family: $gotham-fonts;
+                color: $white-color;
+                background-color: $dark-blue-color;
+                font-size: 1.5rem;
+                line-height: 150%;
+                letter-spacing: 0.3px;
+                padding: 10px 20px;
+                
+
+                @include responsible(m){
+                    padding: 10px 15px;
+                }
+            }
+        }
+
+        
+    }
+    .slider__label-search{
+        margin-top: 10px;
+    }
+
+    .btn__wrap{
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        z-index: 2;
+
+        .contais__btn{
+            @include button($white-color,$dark-blue-color);
+        }
+    }
+    .svg{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        @include responsible(s){
+            display: none;
+        }
+    }
+}

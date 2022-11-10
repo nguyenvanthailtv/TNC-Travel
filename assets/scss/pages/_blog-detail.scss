@@ -1,0 +1,182 @@
+.nav{
+    position: relative;
+    margin-top:calc($header-height + $contact-info-height);
+
+    .wrap{
+        padding: 80px 0;
+
+        @include responsible(m){
+            padding: 40px 0;
+        }
+
+        .heading{
+            font-family: $playfair-fonts;
+            font-size: 4.4rem;
+            line-height: 130%;
+            text-align: center;
+            font-weight: 500;
+
+            @include responsible(m){
+                font-size: 3.4rem;
+            }
+            @include responsible(s){
+                font-size: 3.4rem;
+            }
+        }
+
+        .title{
+            font-size: 1.4rem;
+            line-height: 150%;
+            letter-spacing: 0.4px;
+            text-align: center;
+            padding: 30px 0;
+            color: $text-color;
+            font-family: $gotham-fonts;
+        }
+
+        .social{
+            width: 13%;
+            margin: auto;
+            @include flexCenter(stretch,space-around);
+
+            @include responsible(m){
+                width: 20%;
+            }
+        }
+
+        .content{
+            font-family: $gotham-fonts;
+
+            .picture{
+                margin: 40px 0;
+                    img{
+                        width: 100%;
+                    
+                    }
+            }
+
+            p{
+                font-size: 1.4rem;
+                line-height: 150%;
+                color: #212121;
+                letter-spacing: 0.5px;
+                padding-bottom: 16px;
+            
+            }
+
+            .pictures{
+                display: flex;
+                margin: 40px 0;
+
+                img{
+                    width: 49.5%;
+                    padding-left: 0.5%;
+                }
+            }          
+            
+        }
+        .social__bottom{
+            width: 13%;
+            @include flexCenter(stretch,space-around);
+            margin: 40px 0;
+            @include responsible(m){
+                width: 20%;
+            }
+        }
+        .svg{
+            position: absolute;
+            bottom: 0;
+            right: 5%;
+        }
+    }
+}
+
+
+.connective{
+    padding: 80px 0;
+    background-color: #f5f6f9;
+    @include responsible(m){
+        padding: 40px 0;
+    }
+    @include responsible(s){
+        padding: 40px 0;
+    }
+
+    &__heading {
+        font-family: $playfair-fonts;
+        font-size: 4rem;
+        line-height: 150%;
+        text-align: center;
+        margin-bottom: 40px;
+        color: $text-color;
+
+        @include responsible(m){
+           font-size: 3rem;
+        }
+        @include responsible(s){
+           font-size: 3rem;
+        }
+    }
+    .list-blog{
+        display: flex;
+        flex-wrap: wrap;
+
+        .blog__item{
+            width: calc(100% / 3 - 20px);
+            margin:0 20px 20px 0;
+            padding: 10px;
+            background-color:$white-color;
+
+            @include responsible(m){
+                width: calc(100% / 2 - 20px);
+             }
+
+            @include responsible(s){
+                width: 100%;
+                margin: 10px;
+            }
+
+            .image{
+                width: 100%;
+
+                .blog__link{
+                    display: block;
+                    text-decoration: none;
+                    overflow: hidden;
+
+                    .blog__img{
+                        width: 100%;
+                        height: 272px;
+                        object-fit: cover;
+                        transition: all 0.2s ease-in;
+                    }
+    
+                    &:hover .blog__img{
+                        transform: scale(110%);
+                    }
+                }
+            }
+            .blog__content{
+                display: flex;
+                flex-direction: column;
+                padding: 14px 0;
+    
+                .blog__link{
+                    display: block;
+                    text-decoration: none;
+                    .blog__label{
+                        color: #111111;
+                        font-size: 2rem;
+                        line-height: 150%;
+                        letter-spacing: 0.5px;
+                        font-family: $playfair-fonts;
+    
+                        &:hover{
+                            color: $dark-blue-color;
+                        }
+                    }
+                }
+            }    
+        }
+    }
+}

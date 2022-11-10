@@ -1,0 +1,131 @@
+
+
+@mixin why-us($color,$background-color) {
+
+    .why-us{
+        width: 100%;
+        background: $background-color;
+        font-family: $gotham-fonts;
+        padding-bottom: 90px;
+
+        @include responsible(S){
+            padding: 10px 10px 90px;
+        }
+    
+        &__label{
+            color: $color;
+            margin: 90px 0 50px 0;
+
+            @include responsible(m){
+                margin: 50px 0 30px 0;
+            }
+    
+            & > h1{
+                font-size: 4rem;
+                line-height: 150%;
+                font-weight: 400;
+                text-align: center;
+                letter-spacing: 1.8px;
+                margin-bottom: 20px;
+                font-family: $playfair-fonts;
+
+                @include responsible(m){
+                    font-size: 3rem;
+                }
+                @include responsible(s){
+                    font-size: 3rem;
+                }
+            }
+    
+            &>p{
+                line-height: 2rem;
+                font-size: 1.4em;
+                letter-spacing: 1.7px;
+                color: $color;
+                opacity: 0.8;
+                text-align: center;
+            }
+        }
+    
+        .home__reason{
+            text-align: center;
+            height: 100%;
+            display: block;
+
+            h1{
+                font-size: 2.4rem;
+                color: $color;
+                opacity: 0.8;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+                line-height: 3rem;
+                margin-bottom: 26px;
+                font-family: $playfair-fonts;
+
+                @include responsible(m){
+                    font-size: 2rem;
+                    margin-bottom: 16px;
+                    line-height: 150%;
+                }
+            }
+    
+            p{
+                font-size: 1.4rem;
+                color: $color;
+                opacity: 0.65;
+                margin: 0;
+                padding: 2px 0;
+                line-height: 150%;
+                height: 100%;
+                display: block;
+
+                @include responsible(m){
+                    padding: 0 10px;
+                }
+            }
+        }
+    
+        .bordered{
+            border: 0.5px solid;
+            border-color: transparent rgba($color,0.1) transparent  rgba($color,0.1);
+            position: relative;
+            width: calc(100% + 60px);
+            display: block;
+            height: calc(100% + 30px);
+
+            @include responsible(m){
+                width: 100%;
+            }
+
+            @include responsible(s){
+                display: none;
+            }
+
+            ::after{
+                content: "";
+                display: flex;
+                width: 10px;
+                height: 10px;
+                background-color: #46C0EF;
+                position: absolute;
+                left: -5.1px;
+                top: 50%;
+                transform: rotate(45deg);
+                margin: 2px 0;
+            }
+    
+            ::before{
+                content: "";
+                display: flex;
+                width: 10px;
+                height: 10px;
+                background-color: #46C0EF;
+                position: absolute;
+                right: -5.1px;
+                top: 50%;
+                transform: rotate(45deg);
+                margin: 2px 0;
+            }
+        }
+    }
+}

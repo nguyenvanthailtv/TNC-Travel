@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "sass": "^1.56.0"
+  },
+  
+  "scripts": {
+    "scss":"sass -w ./scss/main.scss ./scss/main.css"
+  }
+
+}

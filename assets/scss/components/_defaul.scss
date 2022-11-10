@@ -1,0 +1,13 @@
+.default{
+    text-decoration: none;
+    display: inline-block;
+    list-style-type: none;
+    color: $white-color;
+    font-size: 1.4rem;
+    line-height: 150%;
+    font-family: $gotham-fonts;
+
+    &:hover{
+        color: $sky-blue-color;
+    }
+}

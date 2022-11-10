@@ -1,0 +1,552 @@
+.nav{
+    margin-top: calc($header-height + $contact-info-height);
+
+    @include responsible(s){
+        margin-top: $header-height;
+    }
+    .banner{
+        width: 100%;
+        height: 590px;
+        display: block;
+        position: relative;
+
+        @include responsible(s){
+            height: 300px;
+        }
+
+        &__container{
+            width: 100%;
+            height: 100%;
+        }
+
+        &__img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s ease-in;
+            
+        }
+
+        .list-image{
+            position: absolute;
+            @include flexCenter(center, space-around);
+            width: 50%;
+            height: 90px;
+            bottom: 8%;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+
+            @include responsible(m){
+                width: 70%;
+            }
+
+            @include responsible(S){
+                width: 98%;
+                bottom: 1%;
+                height: 30%;
+            }
+
+            div{
+                width: 24.5%;
+                max-width: 24.5%;
+                height: 100%;
+                display: block;
+
+                @include responsible(m){
+                    width: 24.5%;
+                    max-width: 24.5%;
+                }
+
+                @include responsible(S){
+                    width: calc(100% / 4 - 1%);
+                }
+            }
+
+            .image{
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .img-active{
+                border: 2px solid $sky-blue-color;
+            }
+        }
+        
+    }
+
+    .menu-bar{
+        background-color: $mid-night-blue-color;
+        font-family: $gotham-fonts;
+
+        &__wrap{
+            height: 75px;
+        
+            .menu-bar__list{
+                display: flex;
+                justify-content: flex-start;
+                height: 100%;
+                padding: 0;
+
+                .menu-bar__item{
+                    list-style: none;
+                    min-width: 14%;
+                    display: block;
+                    height: 100%;
+                    @include responsible(s){
+                        width: calc(100% / 3);
+                    }
+
+                    .menu-bar__link{
+                        text-decoration: none;
+                        height: 100%;
+                        width: 100%;
+                        font-size: 1.6rem;
+                        letter-spacing: 1px;
+                        color: rgba(255,255,255,0.9);
+                        padding: 0 40px;
+                        position: relative;
+                        @include flexCenter(center, center);
+                        border: none;
+            
+                        &:hover{
+                            font-weight: bold;
+            
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                display: block;
+                                width: 100%;
+                                height: 1.5px;
+                                background-color:$sky-blue-color;
+                            }
+                        }
+
+                        @include responsible(s){
+                            padding: 0 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+        
+    }
+
+    .overview{
+        padding: 80px 0 60px;
+
+        @include responsible(S){
+            padding: 60px 10px 40px;
+        }
+
+        .tourist-places{
+
+            .tourist-places__name{
+                padding-right: 110px;
+
+                @include responsible(m){
+                    padding: 0;
+                }
+                @include responsible(s){
+                    padding: 0;
+                }
+
+                .tourist-places__label{
+                    margin-bottom: 30px ;
+                    display: flex;
+                    font-size: 3.8rem;
+                    line-height: 130%;
+                    align-items: center;
+                    letter-spacing: 1px;
+                    font-weight: 400;
+                    color: $text-color;
+                    display: block;
+                    height: 100%;
+                    font-family: $playfair-fonts;
+                    @include responsible(s){
+                        font-size: 3rem;
+                    }
+                }
+
+                .tourist-places__text{
+                    font-size: 1.4rem;
+                    line-height: 150%;
+                    color: $text-color;
+                    letter-spacing: 1.2px;
+                    font-family: $gotham-fonts;
+                }
+            }
+
+            .tourist-places__information{
+                margin: 80px 0 0 0;
+                display: flex;
+
+                
+
+                .tourist-places__exclusion,
+                .tourist-places__inclusion{
+                    flex: 1;
+                    padding: 0 35px;
+
+                    @include responsible(s){
+                        padding: 0 10px;
+                    }
+                }
+
+                .tourist-places__inclusion{
+                    padding-left: 0;
+                    border-right: 0.5px solid rgba(0,0,0,0.1);
+                }
+
+                .exclusion__label,
+                .inclusion__label{
+                    margin-bottom: 30px;
+                    display: flex;
+                    font-size: 3.8rem;
+                    line-height: 130%;
+                    align-items: center;
+                    letter-spacing: 1px;
+                    font-weight: 400;
+                    color: $text-color;
+                    font-family: $playfair-fonts;
+                }
+
+                .exclusion__list,
+                .inclusion__list{
+                    padding-left: 12px;
+                    font-size: 1.2rem;
+                    font-family: $gotham-fonts;
+                }
+
+                .exclusion__link,
+                .inclusion__link{
+                    font-size: 1.4rem;
+                    line-height: 150%;
+                    color: $text-color;
+                    letter-spacing: 1.2px;
+                    text-decoration: none;
+                }
+            }
+            
+        }
+    }
+
+    .book-tour{
+        background-color: $mid-night-blue-color;
+        padding: 20px;
+        width: 90%;
+        margin: auto;
+        font-family: $gotham-fonts;
+
+        @include responsible(m){
+            padding: 15px;
+            width: 100%;
+        }
+
+        @include responsible(s){
+            margin-top: 40px;
+        }
+
+        &__heading{
+            font-size: 2.4rem;
+            line-height: 130%;
+            font-weight: 400;
+            color: $white-color;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            font-family: $playfair-fonts;
+
+            @include responsible(m){
+                margin-bottom: 5px;
+            }
+        }
+
+        &__input{
+            padding: 20px 0;
+            border: 1px solid;
+            border-color: rgba(255,255,255,0.1) transparent;
+
+            @include responsible(m){
+                padding: 10px 0;
+            }
+
+            input{
+                height: 50px;
+                width: 100%;
+                margin-bottom: 20px;
+                background-color: transparent;
+                border: 1px solid rgba(255,255,255,0.4);
+                font-size: 1.3rem;
+                line-height: 2rem;
+                letter-spacing: 0.5px;
+                padding-left: 10px;
+                color: $white-color;
+                outline: none;
+
+                @include responsible(m){
+                    height: 38px;
+                    margin-bottom: 5px;
+                }
+            }
+
+            p{
+                color: rgba(255,255,255,0.9);
+                font-size: 1.3rem;
+                line-height: 150%;
+                letter-spacing: 1.1px;
+            }
+        }
+
+        &__wrap{
+            margin-top: 20px;
+            @include flexCenter(stretch, space-between);
+
+            @include responsible(m){
+                margin-top: 10px;
+            }
+
+            .book-tour__price{
+                display: flex;
+                @include flexCenter(center, flex-start);
+
+                @include responsible(m){
+                    display: none;
+                }
+
+                p{
+                    color: $white-color;
+                    font-size: 1.4rem;
+                    line-height: 150%;
+                    letter-spacing: 0.5px;
+
+                    span{
+                        font-size: 2rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .book-tour__btn{
+                @include button($medium-blue-color,$white-color);
+                font-weight: 600;
+
+                @include responsible(m){
+                    display: block;
+                    width: 100%;
+                    padding: 15px 20px;
+                }
+            }
+        }
+    }
+
+    .tour-plan{
+        padding: 80px 0;
+        background-color: #f5f6f9;
+
+        @include responsible(s){
+            padding: 60px 10px 0;
+        }
+
+        &__box{
+            width: 100%;
+            height: 100%;
+
+            .tour-plan__heading{
+                font-family: $playfair-fonts;
+                font-size: 3.8rem;
+                letter-spacing: 1px;
+                line-height: 130%;
+                color: $text-color;
+                margin-bottom: 10px;
+                @include responsible(s){
+                    font-size: 3rem;
+                }
+            }
+
+            .tour-plan__body{
+                .tour-plan__label{
+                    @include flexCenter(center,center);
+                    border-bottom: 1px solid rgba(0,0,0,0.1);
+                    cursor: pointer;
+                    font-family: $gotham-fonts;
+    
+                    p{
+                        font-size: 1.6rem;
+                        line-height: 130%;
+                        color: $text-color;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                        padding: 20px 0;                   
+                        flex: 2;
+                    }
+                    .svg{
+                        padding: 20px 0;
+                        width: 100%;
+                        flex: 0;
+                        display: block;
+                    }
+
+                    &:hover{
+                        p{
+                            color: $medium-blue-color;
+                        }
+                        .svg{
+                            svg{
+                                transition: all 0.4s;
+
+                                path{
+                                    fill: $medium-blue-color;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .tour-plan__text{
+                    display: none;
+                    position: relative;                
+                    padding-bottom: 30px;
+
+                    p{
+                        font-size: 1.4rem;
+                        line-height: 150%;
+                        color: $text-color;
+                        letter-spacing: 1px;
+                        padding-right: 25px;
+                        margin-top: 20px;
+                        font-family: $gotham-fonts;
+
+                    }
+                }
+
+                &.active{
+                    >.tour-plan__label{
+                        border: none;
+
+                        >p{
+                            color: $medium-blue-color;
+                        }
+
+                        >.svg{
+
+                            >svg{
+                                transform: rotate(180deg); 
+
+                                >path{
+                                    fill: $medium-blue-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .tour-plan__btn {
+                @include button($white-color,$dark-blue-color);
+                margin-top: 30px;
+            }
+            
+        }
+    }
+
+    .hotel-list{
+        padding: 80px 0;
+        background: url('../img/Background\ \(2\).png') bottom left no-repeat;
+        background-blend-mode: lighten;
+
+        &__label{
+            font-size: 3.8rem;
+            line-height: 130%;
+            color: $text-color;
+            font-family: $playfair-fonts;
+            letter-spacing: 1px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            @include responsible(s){
+                font-size: 3rem;
+            }
+        }
+        .table{
+            border-collapse:collapse;
+            font-family: $gotham-fonts;
+
+            @include responsible(s){
+                display: block;
+                overflow: auto;
+            }
+
+            .table__title{
+                th{
+                    font-size: 1.4rem;
+                    letter-spacing: 0.8px;
+                    line-height: 130%;
+                    background-color: $dark-blue-color;
+                    padding: 10px;
+                    width: calc(100% / 6);
+                    color: $white-color;
+                    font-weight: 400;
+                }
+            }
+            .table__item {
+                td{
+                    font-size: 1.4rem;
+                    color: $text-color;
+                    text-align: center;
+                    vertical-align: top;
+                    padding: 10px 6px;
+                    line-height: 130%;
+                    letter-spacing: 0.5px;
+                    background-color: $white-color;
+                }
+            }
+
+
+        }
+        
+        .table, th, td{
+            border: 1px solid #c8c8c8;
+        }
+        
+        
+    }
+
+    .similar-tours{
+        position: relative;
+        background-color: #f5f6f9;
+        padding: 80px;
+
+        @include responsible(S){
+            padding: 0;
+        }
+
+        &__heading{
+            font-family: $playfair-fonts;
+            font-size: 4rem;
+            line-height: 5.7rem;
+            text-align: center;
+            color: $text-color;
+            font-weight: 400;
+            letter-spacing: 1px;
+            @include responsible(s){
+                font-size: 3rem;
+            }
+        }
+        .tour__explore-more{
+            height: 58px;
+            text-align: center;
+            margin-top: 40px;
+
+            button{
+                @include button($white-color,$dark-blue-color);
+            }
+        }
+    }
+    
+}

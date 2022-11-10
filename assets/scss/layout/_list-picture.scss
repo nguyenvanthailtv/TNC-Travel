@@ -1,0 +1,138 @@
+.list-pictures{
+    
+    @include responsible(s){
+       padding: 5px;
+    }
+    &__left{
+        width: calc(100% - 2px);
+
+        @include responsible(s){
+            width: 100%;
+            margin-bottom: 4px;
+        }
+
+        &-top{
+            width: 100%;
+            height: 365px;
+            display: flex;
+            margin-bottom: 4px;
+            @include responsible(m){
+                height: 260px;
+            }
+
+            @include responsible(s){
+                height: 230px;
+            }
+
+            .picture__left{
+                height: 100%;
+                width: 100%;
+                background: url('../img/pexels-foc-foodoncam-58597\ 2.png') center no-repeat ;
+                background-size: cover;
+                margin-right: 4px;
+                display: block;
+            }
+
+            .picture__right{
+                height: 100%;
+                display: block;
+                width: 100%;
+                background: url('../img/Asia-Cambodia-Siem\ Reap-4\ 1.png') center no-repeat ;
+                background-size: cover;
+            }
+        }
+
+        &-bottom{
+            height: 306px;
+            width: 100%;
+            background: url('../img/thailand-chiangmai-rice-field\ 1.png') center no-repeat ;
+            background-size: cover;
+
+            @include responsible(m){
+                height: 230px;
+            }
+            @include responsible(s){
+                height: 200px;
+            }
+        }
+    }
+    &__right{
+        width: calc(100% - 2px);
+        float: right;
+
+        @include responsible(s){
+            width: 100%;
+        }
+
+        &-top{
+            height: 306px;
+            width: 100%;
+            background: url('../img/laos-gold-entrance-temple\ 1.png') center no-repeat ;
+            background-size: cover;
+            margin-bottom: 4px;
+            display: block;
+            @include responsible(m){
+               height: 230px;
+            }
+            @include responsible(s){
+                height: 170px;
+            }
+            
+        }
+
+        &-bottom{
+            height: 365px;
+            width: 100%;
+            background: url('../img/Asia-Myanmar-4\ 2.png') center no-repeat ;
+            background-size: cover;
+
+            @include responsible(m){
+                height: 260px;
+            }
+
+            @include responsible(s){
+                height: 230px;
+            }
+        }
+    }
+    a{
+        width: calc(100% - 2px);
+        height: 100%;
+        text-decoration: none;
+        @include flexCenter(center,center);
+
+        .picture__box{
+            display: none;
+            text-align: center;
+            line-height: 130%;
+            font-family: $gotham-fonts;
+
+            .picture__label{
+                color: $white-color;
+                font-size: 1.5rem;
+                letter-spacing: 6px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+
+            .picture__text{
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+            }
+            
+        }
+
+        &:hover{
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        &:hover > .picture__box{
+            display: block;
+        }
+    }
+    
+
+
+    
+}

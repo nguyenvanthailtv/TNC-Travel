@@ -1,0 +1,246 @@
+.footer{
+
+    background-color: $mid-night-blue-color;
+
+    @include responsible(s){
+        padding: 0 20px;
+    }
+
+    &__partner-list{
+        width: 100%;
+        margin: 50px 0;
+        padding: 0;
+        @include flexCenter(center,space-between);
+        list-style-type: none;
+
+        @include responsible(s){
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0 20px;
+            margin: 50px 0 0 0 ;
+        }
+        .partner__item{
+            max-width: calc(100% / 7);
+
+            & > img{
+                max-width: 100%;
+            }
+
+            @include responsible(s){
+                max-width: calc(100% / 4);
+            }
+        }
+
+        
+    }
+
+    &__nav{
+        @include flexCenter(stretch,space-between);
+        padding-bottom:50px;
+        border-bottom: 1px solid rgba(255,255,255,0.25);
+        position: relative;
+        font-family: $gotham-fonts;
+        @include responsible(m){
+            padding-bottom: 40px;
+        }
+
+        @include responsible(s){
+            display: block;
+            text-align: center;
+        }
+
+        .nav__label{
+            color: $sky-blue-color;
+            font-size: 1.3rem;
+            line-height: 150%;
+            margin: 0 0 30px 0;
+            text-transform: uppercase;
+            letter-spacing: 4.4px;
+            font-weight: 500;
+            opacity: 0.9;
+
+            @include responsible(s){
+                margin: 40px 0 20px 0;
+            }
+            
+        }
+
+        .nav__our-offices{
+
+            .nav__head-offices{
+                margin-bottom: 30px;
+                color: $white-color;
+
+                @include responsible(s){
+                    margin-bottom: 10px;
+                }
+
+                
+                h2{
+                    font-size: 1.4rem;
+                    opacity: 0.7;
+                    font-weight: 300;
+                    letter-spacing: 1.5px;
+                    margin: 0;
+                    text-shadow:
+                        1px 1px 1px black,
+                        -1px -1px 1px black,
+                        -1px 1px 1px black,
+                        1px -1px 1px black,
+                        0px 1px 1px black,
+                        0px -1px 1px black,
+                        0px 1px 1px black,
+                        0px -1px 1px black,
+                        1px 0px 1px black,
+                        -1px 0px 1px black,
+                        -1px 0px 1px black,
+                        1px 0px 1px black;
+                }
+
+                p{
+                    font-size: 1.4rem;
+                    line-height: 130%;
+                    margin-top: 12px;
+                    letter-spacing: 2px;
+                    padding-right: 75px;
+                    font-weight: 300;
+                    opacity: 1;
+
+                    @include responsible(s){
+                        padding: 0;
+                    }
+                }
+
+                .nav__head-offices--Saigon{
+                    text-shadow: none;
+                }
+            }
+        }
+
+        .nav__list{
+                list-style-type: none;
+                padding: 0;
+                
+                .nav__item{
+                    
+                    .nav__link{
+                        @include default($white-smoke-color,$gotham-fonts,$sky-blue-color);
+                        opacity: 0.9;
+                        font-weight: 300;
+                        font-size: 1.4rem;
+                        margin-bottom: 15px;
+
+                        @include responsible(s){
+                            margin-bottom: 10px
+                        }
+                    }
+                }
+        }
+
+        .nav__subscribe{
+            
+            .nav__email{
+                @include flexCenter(stretch,flex-start);
+                border-bottom: 1.5px groove rgb(206, 206, 206);
+
+                input{
+                    background: transparent;
+                    border: transparent;
+                    font-size: 1.3rem;
+                    line-height: 130%;
+                    letter-spacing: 1.5px;
+                    flex: 1;
+                    padding-bottom: 10px;
+                    outline: none;
+                    caret-color: rgba(255, 255, 255, 0.8);
+
+                    &::placeholder{
+                        color: $white-color;
+                        letter-spacing: 2px;
+                        opacity: 30%;
+                        font-weight: 300;
+                    }
+                }
+
+                a {
+                    
+                    img{
+                        color: $white-color;
+                        width: 28px;
+                    }
+                }
+            }
+
+            .nav__social{
+
+                &-list{
+                    list-style-type: none;
+                    @include flexCenter(stretch, flex-start);
+                    padding: 0;
+                    margin: 35px 0;
+
+                    @include responsible(s){
+                        margin: 20px 0;
+                        justify-content: center;
+                    }
+                }
+
+                &-item{
+                    margin-right: 20px;
+                }
+
+                &-link{
+                    display: block;
+                }
+            }
+
+            .nav__text{
+                color: $white-color;
+                font-size: 1.4rem;
+                opacity: 0.9;
+                line-height: 2rem;
+                letter-spacing: 1px;
+                font-weight: 200;
+                text-shadow:
+                    1px 1px 1px black,
+                    -1px -1px 1px black,
+                    -1px 1px 1px black,
+                    1px -1px 1px black,
+                    0px 1px 1px black,
+                    0px -1px 1px black,
+                    0px 1px 1px black,
+                    0px -1px 1px black,
+                    1px 0px 1px black,
+                    -1px 0px 1px black,
+                    -1px 0px 1px black,
+                    1px 0px 1px black;
+            }
+        }
+    }
+    
+    .footer__license{
+        display: block;
+        text-align: center;
+        font-family: $gotham-fonts;
+
+        p {
+            color: $white-color;
+            opacity: 0.9;
+            font-weight: 300;
+            letter-spacing: 2px;
+            font-size: 1.3rem;
+            line-height: 150%;
+            padding: 15px 0;
+            display: inline-block;
+        }
+    }
+}
+
+.backtop {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
