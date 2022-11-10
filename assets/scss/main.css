@@ -4088,6 +4088,11 @@ html {
     padding: 9px 0;
   }
 }
+@media (max-width: 739px) {
+  .nav__search .search__wrap .search__list .search__item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+}
 .nav__search .search__wrap .search__list .search__item .search__input {
   flex: 1;
   font-size: 1.4rem;
