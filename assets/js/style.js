@@ -35,12 +35,15 @@ $('.mobile__btn').click(function(){
       'opacity':'1',
   });
 
+
+
   setTimeout(function() {
-    $('.box__wrapper').css({
+    $('.box__container').css({
       'transform':'translateX(0)',
       'opacity':'1',
-  });
+    });
   },100)
+
 
 
 
@@ -49,9 +52,9 @@ $('.box').click(function(e){
     e.stopPropagation();
 });
 $('.close__btn').click(function(){
-  $('.box__wrapper').css({
-      'transform':'translateX(100%)',
-      'opacity':'0',
+  $('.box__container').css({
+    'transform':'translateX(100%)',
+    'opacity':'0',
   });
   setTimeout(function() {
     $('.box').css({
